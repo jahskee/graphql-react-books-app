@@ -1,3 +1,5 @@
+# GraphQL & React - App 1
+
 1. Root Query:
 
 {
