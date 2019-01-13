@@ -1,4 +1,4 @@
-# GraphQL & React - App 1
+# GraphQL & React - App 01
 
 1. Root Query:
 
