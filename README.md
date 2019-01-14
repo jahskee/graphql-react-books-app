@@ -18,6 +18,13 @@
   }
 }
 
+{ 
+  book(id:"5c3b5ad0bd181e11597b2675" ) {
+    id
+    name
+  } 
+}
+
 2. Mutation
 
 mutation {

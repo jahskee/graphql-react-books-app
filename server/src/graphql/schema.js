@@ -15,6 +15,7 @@ const {
 } = graphql;
 
 
+
 const BookType = new GraphQLObjectType({
     name: 'Book',
     fields: () => ({
@@ -29,7 +30,6 @@ const BookType = new GraphQLObjectType({
         }
     })
 });
-
 
 const AuthorType = new GraphQLObjectType({
     name: 'Author',
@@ -48,42 +48,40 @@ const AuthorType = new GraphQLObjectType({
 
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
-    fields: {
+    fields: () =>({
         book: {
             type: BookType,
             args: {id: { type: GraphQLID}},
             resolve(parent, args){
-               return Book.findById(args.id);
-              
+               return Book.findById(args.id);              
             }
         },
         author: {
             type: AuthorType,
             args: { id: { type: GraphQLID }},
-            resolve( parent, args ) {
+            resolve( parent, args ){
                return Author.findById(args.id);
             }
         },
         books: {
             type: new GraphQLList(BookType),
-            resolve(parent, args) {
+            resolve(parent, args){
                 return Book.find({});
             }
         },
         authors: {
             type: new GraphQLList(AuthorType),
-            resolve(parent, args) {
+            resolve(parent, args){
                 return Author.find({});
             }
-        }
-    
-    }
+        }    
+    }),
 });
 
 
 const Mutation = new GraphQLObjectType({
     name: 'Mutation',
-    fields: {
+    fields: () => ({
         addAuthor: {
             type: AuthorType,
             args: {                
@@ -116,7 +114,7 @@ const Mutation = new GraphQLObjectType({
 
             }
         }
-    }
+    })
 })
 
 
