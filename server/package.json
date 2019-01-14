@@ -4,7 +4,8 @@
   "description": "GraphQL Server App",
   "main": "index.js",
   "scripts": {
-    "test": "mocha __test/*.test.js"
+    "start": "nodemon src/app.js",
+    "test": "mocha src/__test/*.test.js"
   },
   "author": "Jaizon Lubaton",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "chai": "^4.2.0",
     "graphql": "^14.0.2",
     "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
     "supertest": "^3.3.0"
   }
 }

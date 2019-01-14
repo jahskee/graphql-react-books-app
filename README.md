@@ -68,3 +68,5 @@ III. Install Apollo Client
   IV. Unit Testing GraphQL application
 
 npm i --save-dev mocha chai supertest graphql
+
+Reference: https://dzone.com/articles/testing-graphql-server-in-nodejs

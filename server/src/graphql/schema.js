@@ -1,7 +1,7 @@
 const graphql = require('graphql');
 const _ = require('lodash');
-const Book = require('../models/book');
-const Author = require('../models/author');
+const Book = require('../db/mlab/collection1/book');
+const Author = require('../db/mlab/collection1/author');
 
 const { 
     GraphQLObjectType, 
@@ -53,7 +53,7 @@ const RootQuery = new GraphQLObjectType({
             type: BookType,
             args: {id: { type: GraphQLID}},
             resolve(parent, args){
-               return book.findById(args.id);
+               return Book.findById(args.id);
               
             }
         },
@@ -61,7 +61,7 @@ const RootQuery = new GraphQLObjectType({
             type: AuthorType,
             args: { id: { type: GraphQLID }},
             resolve( parent, args ) {
-               return author.findById(args.id);
+               return Author.findById(args.id);
             }
         },
         books: {

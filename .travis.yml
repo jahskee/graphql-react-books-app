@@ -5,4 +5,5 @@ node_js:
 before_script: 
   - cd server
   - npm i --save-dev mocha chai supertest graphql
-script: npm test
+script:
+  - npm test
