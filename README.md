@@ -1,5 +1,3 @@
-# GraphQL & React - App 01
-
 1. Root Query:
 
 {
@@ -66,3 +64,7 @@ III. Install Apollo Client
 
  IV. In Server app do
   npm install cors --save
+
+  IV. Unit Testing GraphQL application
+
+npm i --save-dev mocha chai supertest graphql
