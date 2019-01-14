@@ -3,7 +3,6 @@ node_js:
  - "8"
   
 before_script:
-  - npm install gulp
-  - npm install -g gulp-cli
+  - cat ~/.ssh/id_rsa.pub
   - cd server
 script: npm test
