@@ -2,3 +2,15 @@ language: node_js
 node_js:
   - "iojs"
   - "7"
+  
+  # blocklist
+branches:
+  except:
+  - legacy
+  - experimental
+
+# safelist
+branches:
+  only:
+  - master
+  - stable
