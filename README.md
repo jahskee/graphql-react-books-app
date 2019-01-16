@@ -1,6 +1,6 @@
 # Reference Implementation of GraphQL
 
-##1. Root Query:
+## 1. Root Query:
 
 	{
 		authors{
@@ -27,7 +27,7 @@
 	  } 
 	}
 
-##2. Mutation
+## 2. Mutation
 
 	mutation {
 	  addAuthor(name: "Tery Pratchett", age: 66) {
@@ -67,7 +67,7 @@
 
 
 
-## III. Install Apollo Client
+## 3. Install Apollo Client
 
 	 npm install apollo-boost react-apollo graphql --save
 
